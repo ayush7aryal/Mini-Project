@@ -18,7 +18,7 @@ void queue::enqueue(int data)
 {
     if(isEmpty())
     {
-        Node *newNode = new Node;
+        Node *newNode = new Node;//Creating a new node and adding 
         newNode->info = data;
         newNode->next = newNode;
         rear=newNode;
@@ -54,7 +54,6 @@ void queue::dequeue()
     else
     {
         int temp = rear->next->info;
-        // delete rear->next;
         if(rear->next==rear)  //If the queue has only one data
         {
             rear = nullptr;
@@ -64,9 +63,10 @@ void queue::dequeue()
         }
         else
         {
-            rear->next = rear->next->next;
+            rear->next = rear->next->next;                //if the queue has more than one data
+            std::cout<<temp <<"has been dequeued"<<std::endl;
         }
-        std::cout<<temp <<"has been dequeued"<<std::endl;
+        
          check--;
         // std::cout<<"Check is"<<check<<std::endl;
 
@@ -103,6 +103,7 @@ void queue::dequeue()
  void queue::printQueue()
  {
      Node *temp = rear;
+     std::cout<<"The datas in the queue are";
      do
      {
          

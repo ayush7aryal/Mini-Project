@@ -8,16 +8,16 @@ int main()
     int data;
     bool check = true;
     queue x;
-    std::cout<<"*********What do you want to operate in the Queue********"<<std::endl;
+    std::cout<<"\t*********What do you want to operate in the Queue********"<<std::endl;
 
-    std::cout<<"1. CHeck if the queue is empty"<<std::endl;
-    std::cout<<"2. Add a data to the Queue(Operate enqueue)"<<std::endl;
-    std::cout<<"3. Remove the data from the queue(Operate Dequeue)"<<std::endl;
-    std::cout<<"4. Get the front element of the Queue"<<std::endl;
-    std::cout<<"5. Get the rear element of the Queue"<<std::endl;
-    std::cout<<"6. Check if  the queue is full"<<std::endl;
-    std::cout<<"7. Print all the elements in the queue"<<std::endl;
-    std::cout<<"8. Terminate the program"<<std::endl;
+    std::cout<<"\t1. CHeck if the queue is empty"<<std::endl;
+    std::cout<<"\t2. Add a data to the Queue(Operate enqueue)"<<std::endl;
+    std::cout<<"\t3. Remove the data from the queue(Operate Dequeue)"<<std::endl;
+    std::cout<<"\t4. Get the front element of the Queue"<<std::endl;
+    std::cout<<"\t5. Get the rear element of the Queue"<<std::endl;
+    std::cout<<"\t6. Check if  the queue is full"<<std::endl;
+    std::cout<<"\t7. Print all the elements in the queue"<<std::endl;
+    std::cout<<"\t8. Terminate the program"<<std::endl;
 
     // std::cout<<"6. Check if  the queue is full"<<std::endl;
 while(check )
