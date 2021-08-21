@@ -12,8 +12,6 @@ bool queue::isEmpty()
 {
     // std::cout<<"Thw queueeeeeeeeeeeeeee is empty"<<std::endl;
     return(rear==nullptr);
-    
-
 }
 
 void queue::enqueue(int data)
@@ -25,7 +23,8 @@ void queue::enqueue(int data)
         newNode->next = newNode;
         rear=newNode;
         check++;
-        std::cout<<"Check is"<<check<<std::endl;
+        // std::cout<<"Check is"<<check<<std::endl;
+        std::cout<<data<<" has been enqueued"<<std::endl;
     }
     else
     {
@@ -37,7 +36,8 @@ void queue::enqueue(int data)
         rear->next= newNode;
         rear= newNode;
         check++;
-        std::cout<<"Check is"<<check<<std::endl;
+        // std::cout<<"Check is"<<check<<std::endl;
+        std::cout<<data<<" has been enqueued"<<std::endl;
         }
         else
         {
@@ -58,7 +58,9 @@ void queue::dequeue()
         if(rear->next==rear)  //If the queue has only one data
         {
             rear = nullptr;
+            std::cout<<temp <<"has been dequeued"<<std::endl;
              check--;
+            //  std::cout<<"Check is"<<check<<std::endl;
         }
         else
         {
@@ -66,7 +68,7 @@ void queue::dequeue()
         }
         std::cout<<temp <<"has been dequeued"<<std::endl;
          check--;
-        std::cout<<"Check is"<<check<<std::endl;
+        // std::cout<<"Check is"<<check<<std::endl;
 
     }
 }
@@ -104,10 +106,11 @@ void queue::dequeue()
      do
      {
          
-         std::cout<<rear->next->info<<","<<std::endl;
+         std::cout<<rear->next->info<<" ";
          rear = rear->next;     
      }
      while (rear!= temp );
+     std::cout<<""<<std::endl;
  }
  
  void queue::isFull()
