@@ -1,6 +1,5 @@
 #pragma once
 
-
 class Node
 {
     public:
@@ -10,17 +9,16 @@ class Node
 class queue
 {
     private:
-    // Node *front;
     Node *rear;
 
 
 public:
-queue();
-virtual bool isEmpty();
-virtual void enqueue(int data);
-virtual void dequeue();
-virtual void front();
-virtual void getRear();
-void printQueue();	
-void isFull();
+ queue();
+ bool isEmpty();
+ void enqueue(int data);
+ void dequeue();
+ void front();
+ void getRear();
+ void printQueue();	
+ void isFull();
 };

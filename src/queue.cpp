@@ -1,4 +1,3 @@
-
 #include<iostream>
 #include "queue.h"
 #define max 5
@@ -10,7 +9,6 @@ queue::queue()
 
 bool queue::isEmpty()
 {
-    // std::cout<<"Thw queueeeeeeeeeeeeeee is empty"<<std::endl;
     return(rear==nullptr);
 }
 
@@ -23,12 +21,11 @@ void queue::enqueue(int data)
         newNode->next = newNode;
         rear=newNode;
         check++;
-        // std::cout<<"Check is"<<check<<std::endl;
         std::cout<<data<<" has been enqueued"<<std::endl;
     }
     else
     {
-        if(check<max)
+        if(check<max)  //Checking if the code is full or not
         {
         Node *newNode = new Node;
         newNode->info = data;
@@ -36,7 +33,6 @@ void queue::enqueue(int data)
         rear->next= newNode;
         rear= newNode;
         check++;
-        // std::cout<<"Check is"<<check<<std::endl;
         std::cout<<data<<" has been enqueued"<<std::endl;
         }
         else
@@ -57,18 +53,17 @@ void queue::dequeue()
         if(rear->next==rear)  //If the queue has only one data
         {
             rear = nullptr;
-            std::cout<<temp <<"has been dequeued"<<std::endl;
+            std::cout<<temp <<" has been dequeued"<<std::endl;
              check--;
-            //  std::cout<<"Check is"<<check<<std::endl;
+            
         }
         else
         {
             rear->next = rear->next->next;                //if the queue has more than one data
-            std::cout<<temp <<"has been dequeued"<<std::endl;
+            std::cout<<temp <<" has been dequeued"<<std::endl;
         }
         
          check--;
-        // std::cout<<"Check is"<<check<<std::endl;
 
     }
 }
@@ -102,8 +97,15 @@ void queue::dequeue()
 
  void queue::printQueue()
  {
+      if(isEmpty())
+     {
+         std::cout<<"The queue is empty"<<std::endl;
+         
+     }
+     else
+     {
      Node *temp = rear;
-     std::cout<<"The datas in the queue are";
+     std::cout<<"The datas in the queue are ";
      do
      {
          
@@ -112,13 +114,14 @@ void queue::dequeue()
      }
      while (rear!= temp );
      std::cout<<""<<std::endl;
+     }
  }
  
  void queue::isFull()
  {
      if (check >= max)
      {
-         std::cout<<"The queue is fulll"<<std::endl;
+         std::cout<<"The queue is full"<<std::endl;
      }
      else
      {

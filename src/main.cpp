@@ -4,11 +4,11 @@
 
 int main()
 {
-    int opt;
+    char opt;
     int data;
     bool check = true;
     queue x;
-    std::cout<<"\t*********What do you want to operate in the Queue********"<<std::endl;
+    std::cout<<"\n\t*********What do you want to operate in the Queue********"<<std::endl;
 
     std::cout<<"\t1. CHeck if the queue is empty"<<std::endl;
     std::cout<<"\t2. Add a data to the Queue(Operate enqueue)"<<std::endl;
@@ -28,7 +28,7 @@ while(check )
 
     switch (opt)
     {
-    case 1:
+    case '1':
         if(x.isEmpty())
         {
             std::cout<<"The queue is empty"<<std::endl;
@@ -43,7 +43,7 @@ while(check )
             break;
         }
         
-    case 2:
+    case '2':
          std::cout<<"Enter the data you want to add in the queue"<<std::endl;
          std::cin>> data;
          x.enqueue(data);
@@ -51,36 +51,39 @@ while(check )
          break;
          
 
-    case 3:
+    case '3':
         x.dequeue();
         
         break;
 
-    case 4:
+    case '4':
         x.front();
         
         break;
 
-    case 5:
+    case '5':
         x.getRear();
         
         break;
 
-    case 6:
+    case '6':
         x.isFull();
         
         break;
 
-    case 7:
+    case '7':
         x.printQueue();
         
         break;
 
-    case 8:
+    case '8':
         check =false;
+        std::cout<<"The program has been terminated"<<std::endl;
         break;
     
     default:
+        std::cout<<"Your option is not valid "<<std::endl;
+        //  check = false;
         break;
     }    
     }
